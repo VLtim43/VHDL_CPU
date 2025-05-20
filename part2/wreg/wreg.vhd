@@ -11,6 +11,7 @@ ENTITY Wreg IS
 
         d_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0); -- Data Input
         w_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0) -- Data Output
+
     );
 END Wreg;
 
