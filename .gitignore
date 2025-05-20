@@ -1,0 +1,13 @@
+# Quartus build folders
+db/
+incremental_db/
+output_files/
+*.rpt
+*.smsg
+*.log
+*.bak
+*.chg
+*.jdi
+*.qws
+*.zip
+*.rar
