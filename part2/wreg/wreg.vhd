@@ -5,13 +5,12 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 ENTITY Wreg IS
     PORT (
-        clk_in : IN STD_LOGIC; -- Clock singal
-        nrst : IN STD_LOGIC; -- Low level reset
+        clk_in : IN STD_LOGIC; -- Clock Signal
+        nrst : IN STD_LOGIC; -- Reset
         wr_en : IN STD_LOGIC; -- Write Enable
 
         d_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0); -- Data Input
         w_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0) -- Data Output
-
     );
 END Wreg;
 
