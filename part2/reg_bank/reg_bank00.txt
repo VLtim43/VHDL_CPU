@@ -1,0 +1,15 @@
+Explanation of the Test file reg_bank00:
+
+No tempo 15 ns, o valor "10101010" é aplicado à entrada regn_di. No entanto, esse dado só é efetivamente escrito no 
+registrador 00 quando ocorre simultaneamente uma borda de subida do sinal clk_in e o sinal regn_wr_ena está em nível alto. 
+Com regn_rd_sel configurado como "00", é possível ler o conteúdo do registrador 00 por meio da saída regn_do, confirmando que a escrita foi realizada com sucesso.
+
+Após os 40 ns, regn_wr_ena é desativado. Apesar da entrada regn_di receber o valor "11111111", nenhuma escrita ocorre, 
+e o conteúdo do registrador permanece inalterado, mantendo o valor anterior "10101010".
+
+Entre os 70 ns e 80 ns, regn_wr_ena é brevemente ativado novamente, permitindo a escrita do valor "11111111" no registrador 00, 
+o que é imediatamente refletido na saída regn_do.
+
+Entre 90 ns e 110 ns, o reset assíncrono (nrst = '0') é ativado. Esse reset tem prioridade sobre qualquer outra operação, 
+sobrescrevendo inclusive uma tentativa de escrita no tempo 100 ns, quando regn_wr_ena está ativo e regn_di carrega o valor "11110000". 
+Devido ao reset, tanto o registrador quanto a saída regn_do são imediatamente zerados, permanecendo com o valor "00000000".
