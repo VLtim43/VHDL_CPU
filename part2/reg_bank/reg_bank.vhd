@@ -16,6 +16,7 @@ ENTITY reg_bank IS
         c_flag_in : IN STD_LOGIC; -- Flag C input
         z_flag_in : IN STD_LOGIC; -- Flag Z input
         v_flag_in : IN STD_LOGIC; -- Flag V input
+
         c_flag_wr_ena : IN STD_LOGIC; -- Write enable for C
         z_flag_wr_ena : IN STD_LOGIC; -- Write enable for Z
         v_flag_wr_ena : IN STD_LOGIC; -- Write enable for V
@@ -29,14 +30,14 @@ ENTITY reg_bank IS
     );
 END reg_bank;
 
-ARCHITECTURE Hardware OF reg_bank IS
+ARCHITECTURE arch OF reg_bank IS
     SIGNAL reg0 : STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0'); -- Initializes first 8bit register 
     SIGNAL reg1 : STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0'); -- Initializes second 8bit register 
     SIGNAL reg2 : STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0'); -- Initializes third 8bit register
 
     SIGNAL reg3 : STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0'); -- Initializes the status register 
 BEGIN
-    -- Writing Sequential  Process
+    -- Writing Sequential Process
     PROCESS (clk_in, nrst) -- Process triggers whenever clock changes, or it's reset
     BEGIN
         IF nrst = '0' THEN -- If reset = 0, all bits are cleared to 00000000
@@ -88,11 +89,12 @@ BEGIN
         reg1 WHEN "01", -- Outputs reg01 if selected
         reg2 WHEN "10", -- Outputs reg10 if selected
         reg3 WHEN "11", -- Outputs reg11 if selected
-        
+
         (OTHERS => '0') WHEN OTHERS;
 
     -- Flag outputs
     c_flag_out <= reg3(0); -- Outputs C flag
     z_flag_out <= reg3(1); -- Outputs Z flag
     v_flag_out <= reg3(2); -- Outputs V flag
-END Hardware;
+
+END arch;
