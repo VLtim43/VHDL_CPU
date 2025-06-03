@@ -23,7 +23,7 @@ ARCHITECTURE rtl OF Ram_2048x8 IS
     SIGNAL data_out : STD_LOGIC_VECTOR(7 DOWNTO 0);
 BEGIN
 
-    -- Synchronous write process with asynchronous reset
+    -- Synchronous write process 
     PROCESS (clk_in, nrst)
     BEGIN
         IF nrst = '0' THEN
@@ -38,8 +38,6 @@ BEGIN
     -- Combinational read logic
     data_out <= ram(to_integer(unsigned(addr))) WHEN mem_rd_en = '1' ELSE
         (OTHERS => 'Z');
-
-    -- Connect bidirectional port
     dio <= data_out;
 
 END ARCHITECTURE;
