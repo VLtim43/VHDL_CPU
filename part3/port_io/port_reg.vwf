@@ -412,7 +412,9 @@ TRANSITION_LIST("abus[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 970.0;
 	}
 }
 
@@ -436,8 +438,8 @@ TRANSITION_LIST("dbus[7]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 980.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 960.0;
 	}
 }
 
@@ -446,7 +448,9 @@ TRANSITION_LIST("dbus[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 960.0;
 	}
 }
 
@@ -456,8 +460,8 @@ TRANSITION_LIST("dbus[5]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 980.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 960.0;
 	}
 }
 
@@ -466,7 +470,9 @@ TRANSITION_LIST("dbus[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 960.0;
 	}
 }
 
@@ -535,7 +541,8 @@ TRANSITION_LIST("port_reg_out[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 35.0;
+		LEVEL 1 FOR 965.0;
 	}
 }
 
@@ -554,7 +561,8 @@ TRANSITION_LIST("port_reg_out[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 35.0;
+		LEVEL 1 FOR 965.0;
 	}
 }
 
@@ -564,7 +572,8 @@ TRANSITION_LIST("port_reg_out[3]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 15.0;
-		LEVEL 1 FOR 985.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 965.0;
 	}
 }
 
@@ -583,7 +592,8 @@ TRANSITION_LIST("port_reg_out[1]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 15.0;
-		LEVEL 1 FOR 985.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 965.0;
 	}
 }
 
@@ -602,8 +612,8 @@ TRANSITION_LIST("wr_en")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 980.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 960.0;
 	}
 }
 
