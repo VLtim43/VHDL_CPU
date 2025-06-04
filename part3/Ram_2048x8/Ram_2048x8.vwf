@@ -698,11 +698,10 @@ TRANSITION_LIST("dio[0]~direct")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 2;
+			REPEAT = 5;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
-		LEVEL 0 FOR 60.0;
 		LEVEL Z FOR 900.0;
 	}
 }
@@ -712,9 +711,13 @@ TRANSITION_LIST("dio[1]~direct")
 	NODE
 	{
 		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+		}
 		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 60.0;
 		LEVEL Z FOR 900.0;
 	}
 }
@@ -726,7 +729,9 @@ TRANSITION_LIST("dio[2]~direct")
 		REPEAT = 1;
 		LEVEL 0 FOR 40.0;
 		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 50.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
 		LEVEL Z FOR 900.0;
 	}
 }
@@ -820,11 +825,10 @@ TRANSITION_LIST("dio[0]~result")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 2;
+			REPEAT = 5;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
-		LEVEL 0 FOR 60.0;
 		LEVEL Z FOR 900.0;
 	}
 }
@@ -834,9 +838,13 @@ TRANSITION_LIST("dio[1]~result")
 	NODE
 	{
 		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+		}
 		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 60.0;
 		LEVEL Z FOR 900.0;
 	}
 }
@@ -848,7 +856,9 @@ TRANSITION_LIST("dio[2]~result")
 		REPEAT = 1;
 		LEVEL 0 FOR 40.0;
 		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 50.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
 		LEVEL Z FOR 900.0;
 	}
 }
