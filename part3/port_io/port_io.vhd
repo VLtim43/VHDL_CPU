@@ -1,9 +1,11 @@
 -- file: port_io.vhd
 -- ____________________________________________________________
--- |    abus       | wr_en  | rd_en  |        operação        |
--- |---------------|--------|--------|------------------------|
--- | base_addr     |   1    |   0    | write on port_reg      |
--- | base_addr     |   0    |   1    | read from port_reg     |
+-- |    abus         | wr_en  | rd_en  |    operação         |
+-- |-----------------|--------|--------|---------------------|
+-- | base_addr       |   1    |   0    | write on port_reg   |
+-- | base_addr       |   0    |   1    | read from port_reg  |
+-- | base_addr + 1   |   1    |   0    | write on dir_reg    |
+-- | base_addr + 1   |   0    |   1    | read from dir_reg   |
 -- ------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -14,38 +16,53 @@ ENTITY port_io IS
         base_addr : STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0')
     );
     PORT (
-        clk_in : IN STD_LOGIC;
-        nrst : IN STD_LOGIC;
-        abus : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-        dbus : INOUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-        wr_en : IN STD_LOGIC;
-        rd_en : IN STD_LOGIC;
-        port_reg_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+        clk_in : IN STD_LOGIC; -- Clock Signal
+        nrst : IN STD_LOGIC; -- Reset
+
+        abus : IN STD_LOGIC_VECTOR(7 DOWNTO 0); -- Address bus input
+        dbus : INOUT STD_LOGIC_VECTOR(7 DOWNTO 0); -- Data bus in/out
+
+        wr_en : IN STD_LOGIC; -- Write enable
+        rd_en : IN STD_LOGIC; -- Read enable
+
+        port_reg_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+        dir_reg_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
     );
 END ENTITY port_io;
 
 ARCHITECTURE rtl OF port_io IS
     SIGNAL port_reg : STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');
+    SIGNAL dir_reg : STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');
+
+    -- base_addr + 1
+    CONSTANT base_addr_plus_one : STD_LOGIC_VECTOR(7 DOWNTO 0) :=
+    STD_LOGIC_VECTOR(unsigned(base_addr) + 1);
 BEGIN
 
-    -- Synchronous write to port_reg
+    -- Synchronous writes to port_reg and dir_reg 
     PROCESS (clk_in, nrst)
     BEGIN
         IF nrst = '0' THEN
             port_reg <= (OTHERS => '0');
+            dir_reg <= (OTHERS => '0');
         ELSIF rising_edge(clk_in) THEN
-            IF (wr_en = '1') AND (abus = base_addr) THEN
-                port_reg <= dbus;
+            IF (wr_en = '1') THEN
+                IF (abus = base_addr) THEN -- Write into port_reg
+                    port_reg <= dbus;
+                ELSIF (abus = base_addr_plus_one) THEN -- Write into dir_reg
+                    dir_reg <= dbus;
+                END IF;
             END IF;
         END IF;
     END PROCESS;
 
-    -- Read
+    -- Combinational read 
     dbus <= port_reg
-        WHEN (rd_en = '1' AND abus = base_addr)
-        ELSE
+        WHEN (rd_en = '1' AND abus = base_addr) ELSE
+        dir_reg
+        WHEN (rd_en = '1' AND abus = base_addr_plus_one) ELSE
         (OTHERS => 'Z');
-
     port_reg_out <= port_reg;
+    dir_reg_out <= dir_reg;
 
 END ARCHITECTURE rtl;
