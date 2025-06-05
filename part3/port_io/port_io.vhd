@@ -41,6 +41,7 @@ BEGIN
         port_io(i) <= port_reg(i) WHEN dir_reg(i) = '1' ELSE
         'Z';
     END GENERATE;
+
     -- Synchronous writes to port_reg and dir_reg
     PROCESS (clk_in, nrst)
     BEGIN
@@ -62,7 +63,7 @@ BEGIN
                     IF dir_reg(i) = '0' THEN
                         latch(i) <= port_io(i); -- Capture input
                     ELSE
-                        latch(i) <= port_reg(i); -- Output mode: reflect port_reg
+                        latch(i) <= port_reg(i); -- Output 
                     END IF;
                 END LOOP;
             END IF;

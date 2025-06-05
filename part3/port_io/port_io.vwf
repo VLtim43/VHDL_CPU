@@ -961,7 +961,19 @@ TRANSITION_LIST("abus[7]")
 		LEVEL 0 FOR 10.0;
 		LEVEL D FOR 10.0;
 		LEVEL 0 FOR 10.0;
-		LEVEL D FOR 960.0;
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL D FOR 920.0;
 	}
 }
 
@@ -974,7 +986,19 @@ TRANSITION_LIST("abus[6]")
 		LEVEL 0 FOR 10.0;
 		LEVEL D FOR 10.0;
 		LEVEL 0 FOR 10.0;
-		LEVEL D FOR 960.0;
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL D FOR 920.0;
 	}
 }
 
@@ -987,7 +1011,19 @@ TRANSITION_LIST("abus[5]")
 		LEVEL 0 FOR 10.0;
 		LEVEL D FOR 10.0;
 		LEVEL 0 FOR 10.0;
-		LEVEL D FOR 960.0;
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL D FOR 920.0;
 	}
 }
 
@@ -1000,7 +1036,19 @@ TRANSITION_LIST("abus[4]")
 		LEVEL 0 FOR 10.0;
 		LEVEL D FOR 10.0;
 		LEVEL 0 FOR 10.0;
-		LEVEL D FOR 960.0;
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL D FOR 920.0;
 	}
 }
 
@@ -1013,7 +1061,19 @@ TRANSITION_LIST("abus[3]")
 		LEVEL 0 FOR 10.0;
 		LEVEL D FOR 10.0;
 		LEVEL 0 FOR 10.0;
-		LEVEL D FOR 960.0;
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL D FOR 920.0;
 	}
 }
 
@@ -1026,7 +1086,19 @@ TRANSITION_LIST("abus[2]")
 		LEVEL 0 FOR 10.0;
 		LEVEL D FOR 10.0;
 		LEVEL 0 FOR 10.0;
-		LEVEL D FOR 960.0;
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL D FOR 920.0;
 	}
 }
 
@@ -1039,7 +1111,19 @@ TRANSITION_LIST("abus[1]")
 		LEVEL 0 FOR 10.0;
 		LEVEL D FOR 10.0;
 		LEVEL 0 FOR 10.0;
-		LEVEL D FOR 960.0;
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL D FOR 920.0;
 	}
 }
 
@@ -1052,7 +1136,19 @@ TRANSITION_LIST("abus[0]")
 		LEVEL 0 FOR 10.0;
 		LEVEL D FOR 10.0;
 		LEVEL 1 FOR 10.0;
-		LEVEL D FOR 960.0;
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL D FOR 10.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 10.0;
+		}
+		LEVEL D FOR 920.0;
 	}
 }
 
@@ -1185,7 +1281,12 @@ TRANSITION_LIST("dbus[0]~direct")
 			LEVEL Z FOR 10.0;
 			LEVEL 0 FOR 10.0;
 		}
-		LEVEL Z FOR 960.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 5.0;
+		LEVEL X FOR 5.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -1198,7 +1299,12 @@ TRANSITION_LIST("dbus[1]~direct")
 		LEVEL 1 FOR 10.0;
 		LEVEL Z FOR 10.0;
 		LEVEL 0 FOR 10.0;
-		LEVEL Z FOR 960.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 5.0;
+		LEVEL X FOR 5.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -1213,7 +1319,12 @@ TRANSITION_LIST("dbus[2]~direct")
 			LEVEL Z FOR 10.0;
 			LEVEL 0 FOR 10.0;
 		}
-		LEVEL Z FOR 960.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 5.0;
+		LEVEL X FOR 5.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -1226,7 +1337,12 @@ TRANSITION_LIST("dbus[3]~direct")
 		LEVEL 1 FOR 10.0;
 		LEVEL Z FOR 10.0;
 		LEVEL 0 FOR 10.0;
-		LEVEL Z FOR 960.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 5.0;
+		LEVEL X FOR 5.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -1235,11 +1351,15 @@ TRANSITION_LIST("dbus[4]~direct")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL Z FOR 10.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL Z FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL Z FOR 960.0;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL Z FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL Z FOR 10.0;
+			LEVEL 1 FOR 10.0;
+		}
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -1254,7 +1374,12 @@ TRANSITION_LIST("dbus[5]~direct")
 			LEVEL Z FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
-		LEVEL Z FOR 960.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 5.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -1263,11 +1388,15 @@ TRANSITION_LIST("dbus[6]~direct")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL Z FOR 10.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL Z FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL Z FOR 960.0;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL Z FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL Z FOR 10.0;
+			LEVEL 1 FOR 10.0;
+		}
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -1282,7 +1411,12 @@ TRANSITION_LIST("dbus[7]~direct")
 			LEVEL Z FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
-		LEVEL Z FOR 960.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 5.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -1367,7 +1501,8 @@ TRANSITION_LIST("latch[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 55.0;
+		LEVEL 1 FOR 945.0;
 	}
 }
 
@@ -1385,7 +1520,8 @@ TRANSITION_LIST("latch[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 55.0;
+		LEVEL 1 FOR 945.0;
 	}
 }
 
@@ -1403,7 +1539,8 @@ TRANSITION_LIST("latch[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 55.0;
+		LEVEL X FOR 945.0;
 	}
 }
 
@@ -1412,7 +1549,8 @@ TRANSITION_LIST("latch[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 55.0;
+		LEVEL X FOR 945.0;
 	}
 }
 
@@ -1421,7 +1559,8 @@ TRANSITION_LIST("latch[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 55.0;
+		LEVEL X FOR 945.0;
 	}
 }
 
@@ -1430,7 +1569,8 @@ TRANSITION_LIST("latch[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 55.0;
+		LEVEL X FOR 945.0;
 	}
 }
 
@@ -1673,7 +1813,11 @@ TRANSITION_LIST("rd_en")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 920.0;
 	}
 }
 
@@ -1701,7 +1845,12 @@ TRANSITION_LIST("dbus[0]~result")
 			LEVEL Z FOR 10.0;
 			LEVEL 0 FOR 10.0;
 		}
-		LEVEL Z FOR 960.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 5.0;
+		LEVEL X FOR 5.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -1714,7 +1863,12 @@ TRANSITION_LIST("dbus[1]~result")
 		LEVEL 1 FOR 10.0;
 		LEVEL Z FOR 10.0;
 		LEVEL 0 FOR 10.0;
-		LEVEL Z FOR 960.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 5.0;
+		LEVEL X FOR 5.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -1729,7 +1883,12 @@ TRANSITION_LIST("dbus[2]~result")
 			LEVEL Z FOR 10.0;
 			LEVEL 0 FOR 10.0;
 		}
-		LEVEL Z FOR 960.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 5.0;
+		LEVEL X FOR 5.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -1742,7 +1901,12 @@ TRANSITION_LIST("dbus[3]~result")
 		LEVEL 1 FOR 10.0;
 		LEVEL Z FOR 10.0;
 		LEVEL 0 FOR 10.0;
-		LEVEL Z FOR 960.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 5.0;
+		LEVEL X FOR 5.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -1751,11 +1915,15 @@ TRANSITION_LIST("dbus[4]~result")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL Z FOR 10.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL Z FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL Z FOR 960.0;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL Z FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL Z FOR 10.0;
+			LEVEL 1 FOR 10.0;
+		}
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -1770,7 +1938,12 @@ TRANSITION_LIST("dbus[5]~result")
 			LEVEL Z FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
-		LEVEL Z FOR 960.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 5.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -1779,11 +1952,15 @@ TRANSITION_LIST("dbus[6]~result")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL Z FOR 10.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL Z FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL Z FOR 960.0;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL Z FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL Z FOR 10.0;
+			LEVEL 1 FOR 10.0;
+		}
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -1798,7 +1975,12 @@ TRANSITION_LIST("dbus[7]~result")
 			LEVEL Z FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
-		LEVEL Z FOR 960.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 5.0;
+		LEVEL Z FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL Z FOR 920.0;
 	}
 }
 
@@ -2276,7 +2458,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "dir_reg";
+	CHANNEL = "port_reg";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 40;
@@ -2286,7 +2468,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "dir_reg[7]";
+	CHANNEL = "port_reg[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 41;
@@ -2296,7 +2478,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "dir_reg[6]";
+	CHANNEL = "port_reg[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 42;
@@ -2306,7 +2488,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "dir_reg[5]";
+	CHANNEL = "port_reg[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 43;
@@ -2316,7 +2498,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "dir_reg[4]";
+	CHANNEL = "port_reg[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 44;
@@ -2326,7 +2508,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "dir_reg[3]";
+	CHANNEL = "port_reg[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 45;
@@ -2336,7 +2518,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "dir_reg[2]";
+	CHANNEL = "port_reg[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 46;
@@ -2346,7 +2528,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "dir_reg[1]";
+	CHANNEL = "port_reg[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 47;
@@ -2356,7 +2538,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "dir_reg[0]";
+	CHANNEL = "port_reg[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 48;
@@ -2366,7 +2548,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "latch";
+	CHANNEL = "dir_reg";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 49;
@@ -2376,7 +2558,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "latch[7]";
+	CHANNEL = "dir_reg[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 50;
@@ -2386,7 +2568,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "latch[6]";
+	CHANNEL = "dir_reg[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 51;
@@ -2396,7 +2578,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "latch[5]";
+	CHANNEL = "dir_reg[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 52;
@@ -2406,7 +2588,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "latch[4]";
+	CHANNEL = "dir_reg[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 53;
@@ -2416,7 +2598,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "latch[3]";
+	CHANNEL = "dir_reg[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 54;
@@ -2426,7 +2608,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "latch[2]";
+	CHANNEL = "dir_reg[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 55;
@@ -2436,7 +2618,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "latch[1]";
+	CHANNEL = "dir_reg[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 56;
@@ -2446,7 +2628,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "latch[0]";
+	CHANNEL = "dir_reg[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 57;
@@ -2546,7 +2728,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io~direct";
+	CHANNEL = "latch";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 67;
@@ -2556,7 +2738,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[7]~direct";
+	CHANNEL = "latch[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 68;
@@ -2566,7 +2748,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[6]~direct";
+	CHANNEL = "latch[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 69;
@@ -2576,7 +2758,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[5]~direct";
+	CHANNEL = "latch[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 70;
@@ -2586,7 +2768,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[4]~direct";
+	CHANNEL = "latch[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 71;
@@ -2596,7 +2778,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[3]~direct";
+	CHANNEL = "latch[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 72;
@@ -2606,7 +2788,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[2]~direct";
+	CHANNEL = "latch[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 73;
@@ -2616,7 +2798,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[1]~direct";
+	CHANNEL = "latch[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 74;
@@ -2626,7 +2808,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[0]~direct";
+	CHANNEL = "latch[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 75;
@@ -2636,7 +2818,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io~result";
+	CHANNEL = "port_io~direct";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 76;
@@ -2646,7 +2828,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[7]~result";
+	CHANNEL = "port_io[7]~direct";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 77;
@@ -2656,7 +2838,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[6]~result";
+	CHANNEL = "port_io[6]~direct";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 78;
@@ -2666,7 +2848,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[5]~result";
+	CHANNEL = "port_io[5]~direct";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 79;
@@ -2676,7 +2858,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[4]~result";
+	CHANNEL = "port_io[4]~direct";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 80;
@@ -2686,7 +2868,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[3]~result";
+	CHANNEL = "port_io[3]~direct";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 81;
@@ -2696,7 +2878,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[2]~result";
+	CHANNEL = "port_io[2]~direct";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 82;
@@ -2706,7 +2888,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[1]~result";
+	CHANNEL = "port_io[1]~direct";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 83;
@@ -2716,7 +2898,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_io[0]~result";
+	CHANNEL = "port_io[0]~direct";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 84;
@@ -2726,7 +2908,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_reg";
+	CHANNEL = "port_io~result";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 85;
@@ -2736,7 +2918,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_reg[7]";
+	CHANNEL = "port_io[7]~result";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 86;
@@ -2746,7 +2928,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_reg[6]";
+	CHANNEL = "port_io[6]~result";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 87;
@@ -2756,7 +2938,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_reg[5]";
+	CHANNEL = "port_io[5]~result";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 88;
@@ -2766,7 +2948,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_reg[4]";
+	CHANNEL = "port_io[4]~result";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 89;
@@ -2776,7 +2958,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_reg[3]";
+	CHANNEL = "port_io[3]~result";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 90;
@@ -2786,7 +2968,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_reg[2]";
+	CHANNEL = "port_io[2]~result";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 91;
@@ -2796,7 +2978,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_reg[1]";
+	CHANNEL = "port_io[1]~result";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 92;
@@ -2806,7 +2988,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "port_reg[0]";
+	CHANNEL = "port_io[0]~result";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 93;
@@ -2816,7 +2998,7 @@ DISPLAY_LINE
 
 TIME_BAR
 {
-	TIME = 30000;
+	TIME = 100000;
 	MASTER = TRUE;
 }
 ;
