@@ -1,0 +1,31 @@
+Durante os primeiros ciclos de clock, o módulo Ram_2048x8 realiza uma sequência de escritas síncronas em posições consecutivas da memória. O sinal de reset assíncrono (nrst) permanece em nível alto durante toda a simulação inicial, indicando que a memória está ativa e não será zerada nesse intervalo.
+
+Inicialmente, ocorre uma leitura da memória no endereço 000, retornando o valor 0, pois todas as células estão zeradas por padrão. Note que o barramento dio permanece em alta impedância (Z) durante essa leitura, como esperado quando mem_rd_en está desativado.
+
+Entre 10 ns e 50 ns, o sinal mem_wr_en permanece em nível lógico alto, permitindo que dados presentes no barramento bidirecional dio sejam gravados nas posições de memória indicadas por addr. São realizados cinco ciclos consecutivos de escrita:
+
+    Em 10 ns, addr = 000 e dio = 1 → RAM[0] recebe 1
+
+    Em 20 ns, addr = 001 e dio = 2 → RAM[1] recebe 2
+
+    Em 30 ns, addr = 002 e dio = 3 → RAM[2] recebe 3
+
+    Em 40 ns, addr = 003 e dio = 4 → RAM[3] recebe 4
+
+Durante esse período, o barramento dio está sendo conduzido externamente com os dados a serem armazenados, e a memória os captura corretamente nas bordas de subida do clock.
+
+A partir de 60 ns, o sinal de escrita é desativado (mem_wr_en = 0) e inicia-se a fase de leitura, com mem_rd_en = 1. Neste modo, a leitura da memória é assíncrona: assim que o endereço é alterado, o conteúdo correspondente da memória é imediatamente colocado no barramento dio, sem depender do clock. A sequência de leituras ocorre da seguinte forma:
+
+    Em 60 ns, addr = 002 → dio reflete o valor 3
+
+    Em 70 ns, addr = 001 → dio reflete o valor 2
+
+    Em 80 ns, addr = 000 → dio reflete o valor 1
+
+Em 90 ns, o sinal de reset (nrst) é ativado (nível lógico baixo), o que imediatamente zera todas as posições de memória. Como resultado, as leituras subsequentes retornam valores zerados:
+
+    Em 100 ns, addr = 003 → dio reflete o valor 0
+
+    Em 110 ns, addr = 000 → dio reflete o valor 0
+
+Esse comportamento confirma que a memória está funcionando corretamente: as escritas são realizadas de forma síncrona, as leituras são assíncronas e o reset tem prioridade, zerando todos os dados independentemente do clock ou dos sinais de controle.

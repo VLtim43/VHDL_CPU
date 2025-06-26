@@ -1,0 +1,8 @@
+Durante os primeiros ciclos de clock, o circuito realiza duas operações de escrita: a primeira ocorre em 10 ns, quando wr_en está ativo (1) e abus é igual ao endereço base (00000000). Nesse momento, o valor presente em dbus (10101010) é armazenado no registrador port_reg. Como o registrador de direção (dir_reg) ainda contém apenas zeros (valor default de reset), os bits de port_io permanecem em alta impedância (Z), pois todos os pinos estão configurados como entrada.
+
+A segunda operação de escrita ocorre em 30 ns, com wr_en = 1 e abus = base_addr + 1 (00000001). O valor 11110000 presente em dbus é armazenado no registrador dir_reg. Isso configura os quatro bits mais significativos da porta (port_io(7 downto 4)) como saídas e os quatro menos significativos (port_io(3 downto 0)) como entradas. A partir da borda de clock seguinte (40 ns), essa configuração é refletida: os bits de saída (port_io(7 downto 4)) passam a conduzir os valores correspondentes de port_reg, enquanto os bits configurados como entrada continuam em alta impedância.
+
+Em 50 ns, inicia-se uma operação de leitura com rd_en = 1 e abus = base_addr (00000000). Nesse instante, o conteúdo de port_io é capturado no registrador latch: os bits de entrada (port_io(3 downto 0)) recebem valores indefinidos (Z, assumindo ‘0’ ou ‘X’ no latch), enquanto os bits de saída copiam o valor de port_reg. Na borda de clock seguinte (60 ns), dbus passa a conduzir o conteúdo de latch, refletindo o estado misto da porta (1010ZZZZ), com os bits de saída visíveis e os de entrada indefinidos.
+
+Em 70 ns, ocorre uma leitura de dir_reg, com rd_en = 1 e abus = base_addr + 1 (00000001). O conteúdo do registrador de direção (11110000) é corretamente transferido para dbus na borda de clock seguinte (80 ns).
+
