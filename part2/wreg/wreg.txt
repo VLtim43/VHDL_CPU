@@ -1,9 +1,0 @@
-Inicialmente, o sinal de habilitação de escrita (wr_en) está desativado, portanto, o valor aplicado em d_in (11111111) não é armazenado no registrador. 
-Como consequência, a saída w_out permanece em 00000000.
-Entre os tempos 10 ns e 20 ns, o sinal wr_en é ativado. Assim, na próxima borda de subida do clock (por volta de 15 ns), o valor presente em d_in (11111111) 
-é armazenado no registrador e imediatamente refletido na saída w_out.
-Posteriormente, um novo valor (10101010) é aplicado em d_in, porém o sinal wr_en encontra-se novamente desativado. Como resultado, 
-nenhuma escrita ocorre e o conteúdo do registrador permanece inalterado, mantendo a saída w_out em 11111111.
-
-No tempo 50 ns, o reset assíncrono (nrst) é ativado (nível lógico baixo), o que provoca a limpeza imediata do registrador. 
-Tanto o conteúdo interno quanto a saída w_out são zerados, assumindo o valor 00000000, independentemente do valor presente em d_in ou do estado de wr_en.

@@ -1,9 +1,0 @@
-Durante os primeiros ciclos, os valores 1, 2, 3, 4, 5, 6 são aplicados em stack_in. No entanto, apenas os valores 1, 2, 3, 5 e 6 são efetivamente armazenados, pois o sinal de stack_push está desativado no momento em que o valor 4 é apresentado. Como resultado, esse valor não é inserido na pilha. A saída stack_out reflete corretamente os valores do topo da pilha conforme eles são empilhados, exibindo a sequência 1, 2, 3, 5, 6.
-
-No tempo 60 ns, o sinal de reset assíncrono (nrst) é ativado (nível lógico baixo), o que zera imediatamente todos os registradores da pilha, independentemente do valor presente em stack_in (que neste instante é 99) ou do estado de stack_push. Esse comportamento confirma a prioridade absoluta do reset sobre qualquer outra operação.
-
-Após o reset, novos valores 10, 20, 30 e 40 são inseridos sucessivamente na pilha por meio da ativação de stack_push, sempre na borda de subida do sinal clk_in. A saída stack_out é atualizada a cada escrita, exibindo o valor mais recente no topo da pilha.
-
-No tempo 110 ns, o sinal stack_pop é ativado, provocando a remoção do último valor inserido (40) na borda de subida do clock. Como esperado, stack_out passa a exibir o novo topo da pilha: 30.
-
-Em seguida, ocorre uma situação em que stack_push e stack_pop são ativados simultaneamente, com o valor 70 presente em stack_in. De acordo com a especificação do componente, a operação de push tem prioridade, portanto o valor 70 é inserido normalmente no topo da pilha, sendo exibido em stack_out.
